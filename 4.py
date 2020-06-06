@@ -1,6 +1,9 @@
+"""четвертый проект о летающей тарелке"""
+
 import turtle as tr
 import math as mth
 from random import randint
+
 
 class Ufo:
     """Класс летающая тарелка"""

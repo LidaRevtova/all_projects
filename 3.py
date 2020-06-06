@@ -1,3 +1,5 @@
+"""третий проект о расписании"""
+
 class Time_Days:
     """класс боковой времени"""
 
@@ -9,7 +11,8 @@ class Time_Days:
 
     def show(self):
         """метод таблички"""
-        s = ' ' * 20 + '|'
+        s = '-' * 153 + '\n'
+        s += '|' + ' ' * 20 + '|'
         for i in self.time:
             s += ' ' * 5 + i + ' ' * (21- len(i) - 5) + '|'
         s += '\n'
@@ -35,17 +38,18 @@ class Desk(Time_Days):
         for i in range(0, len(self.time)-1):
             day = self.a_1[i]
             if i == 2:
-                n = self.group +  ' '+ self.days[i]
-                s += n + ' ' * (20 - len(n)) + '|'
+                n = '|' + self.group +  ' '+ self.days[i]
+                s += n + ' ' * (21 - len(n)) + '|'
             else:
-                s += ' ' * 8 + self.days[i] + ' ' * (20 - 8 - len(self.days[i])) + '|'
+                s +=  '|' + ' ' * 8 + self.days[i] + ' ' * (20 - 8 - len(self.days[i])) + '|'
             for k in day:
                 s +=   k + ' ' * (21 - len(k)) + '|'
             s += '\n'
-        s += ' ' * 8 + self.days[-1] + ' ' * 5 + '|'
+        s += '|' + ' ' * 8 + self.days[-1] + ' ' * 5 + '|'
         f = self.a_1[-1]
         for i in f:
             s += i + ' ' * (21 - len(i)) + '|'
+        s +=  '\n'+ '-' * 153
         s += '\n'
         return s
 

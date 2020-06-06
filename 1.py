@@ -1,3 +1,5 @@
+"""Первый проект о корзине интернет-магазина"""
+
 class Load:
     """класс загрузки файлов"""
     country = {}
@@ -5,7 +7,7 @@ class Load:
 
     @classmethod
     def write(cls, file_name1, file_name2):
-        """стат метод загрузки файлов"""
+        """клас метод загрузки файлов"""
         with open(file_name1, encoding='utf8') as f:
             inf = f.read().splitlines()
             for i in inf:
